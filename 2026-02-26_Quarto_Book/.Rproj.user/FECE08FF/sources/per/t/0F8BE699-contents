@@ -1,0 +1,61 @@
+---
+title: "Group testing complexity"
+format:
+  beamer:
+    include-in-header:
+      - \usetheme{Darmstadt}
+      - \useoutertheme[subsection = false]{miniframes}
+      - \beamertemplatenavigationsymbolsempty
+      - \setbeamertemplate{footline}[text line]{%
+          \parbox{\linewidth}{\vspace*{-4pt} \hfill \tiny{} \textcolor{gray}{\url{www.chrisbilder.com/grouptesting} \hfill \insertframenumber/\inserttotalframenumber}}
+      - \setbeamersize{text margin left=3mm,text margin right=3mm}
+      - \usepackage[T1]{fontenc}
+      - \usepackage[latin9]{inputenc}
+      - \usepackage{babel}
+      - \usepackage{graphicx}
+      - \usepackage{listings}
+      - \lstset{showstringspaces=false, breaklines=true, breakatwhitespace=true, basicstyle=small}
+    aspectratio: 169
+    theme: Darmstadt
+    colortheme: red
+    fonttheme: professionalfonts
+---
+
+## Author
+Christopher R. Bilder  
+University of Nebraska--Lincoln  
+Department of Statistics  
+chris@chrisbilder.com  
+
+## Institute
+Research is supported by NIH grant R01 AI121351  
+Joint work with:  
+- Minh Nguyen at University of Nebraska-Lincoln  
+- Muhammad Yaseen at Clemson University  
+- Joshua M. Tebbs at University of South Carolina  
+- Christopher S. McMahan at Clemson University  
+
+## Introduction
+
+### Infectious Disease Testing
+- Timely  
+- Efficient  
+
+### COVID-19 Pandemic
+- Group testing (pooled testing)  
+  - Process in Nebraska (Abdalhamid et al. 2020)  
+  - Nebraska Governor Pete Ricketts press conference on March 24, 2020  
+  - Combine portions of 5 specimens into a "group"  
+    - Group tests negative: All 5 individuals are negative  
+    - Group tests positive: Retest each individual separately  
+
+### Widely Used During Pandemic
+- Universities (e.g., Duke and Cambridge), government-sponsored testing, healthcare workers, ...  
+- Government health organizations: US FDA and UK NHS  
+- News media: *The New York Times*, *The Washington Post*, ABC News, PBS Newshour, ...  
+
+![NYTimes Article](NYTimesJuly27-2020.png){width=50%}
+
+## Conclusion
+
+---

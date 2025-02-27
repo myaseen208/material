@@ -1,0 +1,47 @@
+/* Globally justify all text */
+body {
+  text-align: justify;
+  background-color: white;
+  color: black; /* Ensures text remains visible */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: black;
+}
+
+a {
+  color: lightblue;
+}
+
+.quarto-title-banner {
+  background-color: #222; /* Darker background for title banner */
+}
+
+/* Change font size of code chunks */
+pre.sourceCode {
+    font-size: 12px;  /* Change the font size of the code */
+}
+
+/* Change font size of output */
+pre code, .output pre {
+    font-size: 12px;  /* Change the font size of the output */
+}
+
+
+/* Change figure caption text color to white */
+figcaption {
+  color: white;
+}
+
+/* Hide the figure label */
+.figure-label {
+  display: none;
+}
+
+/* Make the textarea full width */
+textarea {
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+

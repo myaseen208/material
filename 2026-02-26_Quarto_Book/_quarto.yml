@@ -1,0 +1,25 @@
+project:
+  type: book
+
+book:
+  title: "2026-02-26_Quarto_Book"
+  author: "MYaseen208"
+  date: "2025-02-26"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+  pdf:
+    documentclass: scrreprt
+
+
+

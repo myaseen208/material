@@ -1,0 +1,40 @@
+project:
+  title: "Reading Chunks from an External Script in Quarto Project Using `knitr::read_chunk`"
+author: "MYaseen208"
+format:
+  html:
+    mainfont: Latin Modern Roman
+    sansfont: Latin Modern Roman
+    toc: true
+    toc-title: "Table of Contents"
+    toc-depth: 2
+    # toc-location: left
+    number-sections: true
+    number-depth: 3
+    smooth-scroll: true
+    html-math-method: katex
+    css: styles.css
+    default-image-extension: svg
+    tbl-cap-location: top
+    fig-width: 8
+    fig-height: 6
+    fig-align: center
+    fig-cap-location: bottom
+    fig-format: svg
+    out.width: '100%'
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+execute:
+  echo: true
+  warning: false
+  message: false
+  error: true
+knitr:
+  opts_chunk:
+    tidy: true
+
+
+

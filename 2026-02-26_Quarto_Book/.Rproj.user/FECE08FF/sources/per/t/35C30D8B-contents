@@ -1,0 +1,87 @@
+---
+title: "**Group Testing Complexity**"
+author: "**Christopher R. Bilder**"
+institute: |
+  University of Nebraska–Lincoln \
+  Department of Statistics \
+  \href{mailto:chris@chrisbilder.com}{chris@chrisbilder.com} \
+  \vspace*{0.75cm}
+  Research supported by NIH grant R01 AI121351 \
+  \vspace*{0.15cm}
+  Joint work with \
+  Minh Nguyen (University of Nebraska-Lincoln) \ 
+  Muhammad Yaseen (Clemson University)  \
+  Joshua M. Tebbs (University of South Carolina)  \
+  Christopher S. McMahan (Clemson University)
+format:
+  beamer:
+    theme: Darmstadt
+    mainfont: Latin Modern Roman
+    sansfont: Latin Modern Roman
+    aspectratio: 169
+    colortheme: red
+    titlepage: true
+    incremental: true
+    section-titles: false
+header-includes: |
+  \PassOptionsToClass{t, xcolor=table}{beamer}
+  \useoutertheme[subsection = false]{miniframes}
+  \beamertemplatenavigationsymbolsempty 
+  \setbeamertemplate{footline}[text line]{%
+    \parbox{\linewidth}{\vspace*{-4pt} \hfill   \tiny{} \textcolor{gray}{\url{www.chrisbilder.com/grouptesting} \hfill  \insertframenumber/\inserttotalframenumber}}}
+  \setbeamersize{text margin left=3mm,text margin right=3mm}
+  \AtBeginSection{}  % Disable section slides
+  \definecolor{darkred}{RGB}{139, 0, 0}  % Define darkred using RGB values
+    \setbeamerfont{title}{size=\fontsize{32}{48}\selectfont}  % Set custom font size for the title
+  \setbeamercolor{title}{fg=white}  % Set title text color to white
+  \setbeamercolor{background canvas}{bg=white}  % Set background color to white
+  \setbeamercolor{normal text}{fg=black}  % Set default text color to black
+  \setbeamercolor{structure}{fg=darkred}  % Set structure (e.g., titles, bullets) color to darkred
+  \setbeamercolor{section in head/foot}{fg=white, bg=darkred}  % Use custom darkred
+  \setbeamercolor{subsection in head/foot}{fg=white, bg=darkred}  % Use custom darkred
+  \setbeamercolor{item}{fg=darkred}  % Set bullet color to darkred
+---
+
+# Introduction
+
+## 
+
+- Infectious disease testing  
+  - Timely  
+  - Efficient  
+
+\pause
+- COVID-19 pandemic  
+
+\pause
+- Group testing  
+  - Also known as “pooled testing”  
+  - Process in Nebraska (Abdalhamid et al. 2020)  
+
+\pause
+- Nebraska Governor Pete Ricketts press conference on March 24, 2020  
+
+\pause
+- Combine together portions of 5 specimens from different individuals into a “group”  
+
+\pause
+- Test as if it were a single specimen  
+  - Group tests negative: All 5 individuals are negative  
+  - Group tests positive: Retest each individual separately to determine who is positive or negative  
+\pause
+- Decrease number of tests, increase testing capacity  
+
+## 
+
+- Widely used during pandemic  
+  - Universities (e.g., Duke and Cambridge), government-sponsored testing, healthcare workers, ...  
+  - Government health organizations: US FDA and UK NHS  
+  - News media: *The New York Times*, The Washington Post, ABC News, PBS Newshour, ...  
+
+\pause
+![](NYTimesJuly27-2020.png){fig-align="center" width=60%}
+
+# Conclusion
+## 
+
+\maketitle

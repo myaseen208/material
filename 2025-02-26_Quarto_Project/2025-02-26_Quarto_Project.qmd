@@ -1,0 +1,72 @@
+---
+title: "Reading Chunks from an External Script in Quarto Project Using `knitr::read_chunk`"
+---
+
+
+```{r}
+knitr::read_chunk("./R/RCode.R")
+```
+
+This is a test document to demonstrate how to read chunks from an external script in Quarto document
+
+# Code1
+
+This is a standard code chunk that executes normally, displaying both the input code and its output in the document.
+
+```{r}
+#| label: Code1
+```
+
+
+# Code2 with chunk option `echo = FALSE`
+
+This code chunk runs as usual, but the input code is not shown in the output. Only the results or output of the code appear in the document, which is useful when you want to present results without displaying the underlying code.
+
+```{r}
+#| label: Code2
+#| echo: false
+```
+
+# Code3 with chunk option `eval = FALSE`
+
+This code chunk is displayed in the document but is not executed. It is useful when you want to show code for instructional purposes without actually running it.
+
+
+```{r}
+#| label: Code3
+#| eval: false
+```
+
+# Code3 with `ref.label` option
+
+The `ref.label` option allows you to reference and reuse a previously defined code chunk. Instead of rewriting the same code multiple times, you can use `ref.label` to include the code from another chunk, ensuring consistency across the document.
+
+
+```{r}
+#| ref.label: "Code3"
+```
+
+# Code4 with chunk options `tidy = TRUE`
+
+This chunk **automatically reformats code** and sets a maximum line width of 80 characters.
+
+
+```{r}
+#| label: Code4
+#| eval: false
+```
+
+# Reading `csv` file
+
+
+```{r}
+#| label: Code5
+```
+
+
+# Reading `xlsx` file
+
+
+```{r}
+#| label: Code6
+```

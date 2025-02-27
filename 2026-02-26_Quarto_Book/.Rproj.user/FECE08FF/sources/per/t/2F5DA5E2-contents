@@ -1,0 +1,147 @@
+\documentclass[english,t,red,aspectratio=169, xcolor=table]{beamer}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{babel}
+\usepackage{graphicx}
+\ifx\hypersetup\undefined
+  \AtBeginDocument{%
+    \hypersetup{unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
+ breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=false,colorlinks=false}
+  }
+\else
+  \hypersetup{unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
+ breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=false,colorlinks=false}
+\fi
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+% this default might be overridden by plain title style
+\newcommand\makebeamertitle{\frame{\maketitle}}%
+% (ERT) argument for the TOC
+\AtBeginDocument{%
+  \let\origtableofcontents=\tableofcontents
+  \def\tableofcontents{\@ifnextchar[{\origtableofcontents}{\gobbletableofcontents}}
+  \def\gobbletableofcontents#1{\origtableofcontents}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usetheme{Darmstadt} % like Warsaw with circle outline - I like
+
+%16:9: Put ", aspectratio = 169" without quotes in document class options
+
+%Changes the way bullets and numbering look
+\useoutertheme[subsection = false]{miniframes}  %This removed an extra bar giving the subsection titles. 
+
+\beamertemplatenavigationsymbolsempty 
+%This puts a page number on each page nicely
+%\setbeamertemplate{footline}[page number]
+%Insert frame number instead - helpful if there is any animation (page number <> frame number)
+
+% This is my preferred way to do a bottom footer
+\setbeamertemplate{footline}[text line]{%
+  \parbox{\linewidth}{\vspace*{-4pt} \hfill   \tiny{} \textcolor{gray}{\url{www.chrisbilder.com/grouptesting} \hfill  \insertframenumber/\inserttotalframenumber}}}
+
+% 5-16-24: Not sure why this is here :)
+%\usepackage{textcomp}
+%\usepackage{anyfontsize} %https://texblog.org/2012/08/29/changing-the-font-size-in-latex/
+%\texttt
+%\hspace{2in}
+
+\setbeamersize{text margin left=3mm,text margin right=3mm} 
+
+%Use these options for the handouts. This creates 4 frames per page. Note that you also need to change the document class "custom" option to "handout" (without the quotes)
+%\usepackage{pgfpages} 
+%\pgfpagesuselayout{4 on 1}[letterpaper, border shrink=5mm, landscape]
+
+%\usepackage[table]{xcolor}
+
+
+
+ 
+
+\makeatother
+
+\usepackage{listings}
+\lstset{showstringspaces=false,
+breaklines=true,
+breakatwhitespace=true,
+basicstyle=small}
+\begin{document}
+\title{\textbf{\fontsize{20}{24}\selectfont \ Group testing complexity}}
+\author{{\normalsize Christopher R. Bilder}\\
+{\normalsize\textsuperscript{}University of Nebraska--Lincoln}\\
+{\normalsize Department of Statistics}\\
+{\normalsize chris@chrisbilder.com}}
+\institute{{\scriptsize Research is supported by NIH grant R01 AI121351 }{\normalsize}\\
+{\normalsize{} \vspace{0.1in}
+}{\scriptsize{} Joint work with }\\
+{\scriptsize Minh Nguyen at University of Nebraska-Lincoln, }\\
+{\scriptsize Muhammad Yaseen at Clemson University, }\\
+{\scriptsize Joshua M. Tebbs at University of South Carolina, and }\\
+{\scriptsize Christopher S. McMahan at Clemson University }{\normalsize}\\
+{\normalsize\vspace{0.1in}
+}}
+\date{\date{}}
+\makebeamertitle
+
+\section{Introduction}
+
+\subsection{~}
+\begin{frame}{}
+\begin{itemize}
+\item <1->Infectious disease testing
+\begin{itemize}
+\item Timely
+\item Efficient
+\end{itemize}
+\item <2->COVID-19 pandemic
+\item <3->Group testing
+\begin{itemize}
+\item Also known as ``pooled testing''
+\item Process in Nebraska(Abdalhamid et al.\ 2020)
+\item <4->Nebraska Governor Pete Ricketts press conference on March 24,
+2020
+\item <5->Combine together portions of 5 specimens from different individuals
+into a ``group''
+\item <5->Test as if it were a single specimen
+\begin{itemize}
+\item Group tests negative: All 5 individuals are negative
+\item Group tests positive: Retest each individual separately to determine
+who is positive or negative
+\end{itemize}
+\item <6->Decrease number of tests, increase testing capacity
+\end{itemize}
+\end{itemize}
+\end{frame}
+%
+\begin{frame}{}
+\begin{itemize}
+\item <1->Widely used during pandemic
+\begin{itemize}
+\item Universities (e.g., Duke and Cambridge), government-sponsored testing,
+healthcare workers, ...
+\item Government health organizations: US FDA and UK NHS
+\item News media: \emph{The New York Times}, \emph{The Washington Post},
+ABC News, PBS Newshour, ...
+
+\vspace{0.25cm}
+\includegraphics[scale=0.42]{NYTimesJuly27-2020}
+\end{itemize}
+\end{itemize}
+\end{frame}
+%
+
+\section{Conclusion}
+
+\subsection{\ }
+\begin{frame}{}
+
+\maketitle
+\end{frame}
+%
+
+\end{document}
